@@ -1,0 +1,158 @@
+@import "tailwindcss";
+
+@layer utilities {
+  /* High-Tech QR Scanner Beam */
+  @keyframes scannerBeam {
+    0% {
+      top: 0%;
+      opacity: 0.2;
+    }
+    15% {
+      opacity: 1;
+    }
+    85% {
+      opacity: 1;
+    }
+    100% {
+      top: 96%;
+      opacity: 0.2;
+    }
+  }
+
+  .animate-scanner-beam {
+    animation: scannerBeam 2.2s cubic-bezier(0.4, 0, 0.2, 1) infinite alternate;
+  }
+
+  /* AI Pulse Breathing & Concentric Rings */
+  @keyframes aiPulseCore {
+    0%, 100% {
+      transform: scale(1);
+      box-shadow: 0 0 15px rgba(6, 182, 212, 0.4), 0 0 30px rgba(59, 130, 246, 0.2);
+    }
+    50% {
+      transform: scale(1.08);
+      box-shadow: 0 0 25px rgba(6, 182, 212, 0.7), 0 0 50px rgba(59, 130, 246, 0.4);
+    }
+  }
+
+  .animate-ai-pulse {
+    animation: aiPulseCore 3s ease-in-out infinite;
+  }
+
+  @keyframes aiRingExpand {
+    0% {
+      transform: scale(0.9);
+      opacity: 0.8;
+    }
+    100% {
+      transform: scale(1.8);
+      opacity: 0;
+    }
+  }
+
+  .animate-ai-ring {
+    animation: aiRingExpand 2.4s cubic-bezier(0.1, 0.8, 0.3, 1) infinite;
+  }
+
+  /* Floating Ambient Gradient Blobs */
+  @keyframes floatSlow1 {
+    0%, 100% {
+      transform: translate(0px, 0px) scale(1);
+    }
+    33% {
+      transform: translate(40px, -50px) scale(1.1);
+    }
+    66% {
+      transform: translate(-30px, 30px) scale(0.95);
+    }
+  }
+
+  @keyframes floatSlow2 {
+    0%, 100% {
+      transform: translate(0px, 0px) scale(1);
+    }
+    33% {
+      transform: translate(-45px, 35px) scale(0.92);
+    }
+    66% {
+      transform: translate(35px, -40px) scale(1.08);
+    }
+  }
+
+  .animate-float-1 {
+    animation: floatSlow1 18s ease-in-out infinite;
+  }
+
+  .animate-float-2 {
+    animation: floatSlow2 22s ease-in-out infinite;
+  }
+
+  /* Shimmer Skeleton Wave */
+  @keyframes shimmerWave {
+    0% {
+      transform: translateX(-100%);
+    }
+    100% {
+      transform: translateX(100%);
+    }
+  }
+
+  .animate-shimmer {
+    animation: shimmerWave 1.8s infinite;
+  }
+
+  /* Tactile Visual Haptic Micro-Pop */
+  @keyframes hapticClick {
+    0% {
+      transform: scale(1);
+    }
+    40% {
+      transform: scale(0.94);
+    }
+    75% {
+      transform: scale(1.02);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+
+  .haptic-tap:active {
+    animation: hapticClick 0.22s ease-out;
+  }
+
+  /* Soft Blue Luminous Glow */
+  .glow-blue {
+    box-shadow: 0 0 25px -4px rgba(59, 130, 246, 0.4), 0 0 10px -2px rgba(6, 182, 212, 0.3);
+  }
+
+  .glow-blue-sm {
+    box-shadow: 0 0 14px -2px rgba(59, 130, 246, 0.35);
+  }
+
+  .glow-cyan {
+    box-shadow: 0 0 25px -4px rgba(6, 182, 212, 0.45);
+  }
+
+  /* Glassmorphism Classes */
+  .glass-card {
+    background: rgba(15, 23, 42, 0.72);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+  }
+
+  .glass-card-hover {
+    transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+  .glass-card-hover:hover {
+    background: rgba(15, 23, 42, 0.85);
+    border-color: rgba(96, 165, 250, 0.35);
+    box-shadow: 0 12px 36px -8px rgba(37, 99, 235, 0.25), 0 0 0 1px rgba(96, 165, 250, 0.2);
+    transform: translateY(-2px);
+  }
+
+  .mirror {
+    transform: scaleX(-1);
+  }
+}

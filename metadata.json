@@ -1,0 +1,11 @@
+{
+  "name": "Vending Machine Clinic",
+  "description": "Futuristic self-service medical kiosk and healthcare platform with rapid diagnostics, AI reports, and doctor consultations.",
+  "requestFramePermissions": [
+    "camera",
+    "microphone"
+  ],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}
